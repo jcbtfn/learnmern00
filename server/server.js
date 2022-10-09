@@ -10,8 +10,22 @@ mongoose
 // Model
 const Composer = require('./models/composer.model')
 
-app.get('/hello', (req, res) => res.json({
-  message: 'ola ke ase?',
+//Routing
+app.get ('/api/composers', (req, res) => { //all the composers/list of composers
+  Composer
+    .find()
+    .then(allComposers => res.json(allComposers))
+})
+
+app.get ('/api/composers/:composerid', (req, res) => { //get the composer by id
+  const {composerid} = req.params
+  Composer
+    .findById(composerid)
+    .then(composer => res.json(composer))
+})
+
+app.get('/test', (req, res) => res.json({
+  message: 'Hola Jacob X)',
   date: new Date(),
   campus: 'Tenerife'
 }))

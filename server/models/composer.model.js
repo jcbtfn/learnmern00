@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
 const composerSchema = mongoose.Schema({
-  composers: [{
     name: String,
     complete_name: String,
     epoch: String,
@@ -17,9 +16,9 @@ const composerSchema = mongoose.Schema({
       reccomended: String,
       genre: String
     }]
-  }]
-})
+  }
+)
 
-const Composer = mongoose.model('cmusicb', composerSchema)
+const Composer = mongoose.model('composer', composerSchema)
 
 module.exports = Composer
