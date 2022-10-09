@@ -30,6 +30,6 @@ app.get('/test', (req, res) => res.json({
   campus: 'Tenerife'
 }))
 
-app.listen(5005, () => console.log('Server up!'))
+app.listen(5005, () => console.log('Server up!')) //server for the api
 
 //after server and route set up, we need to set up the models
