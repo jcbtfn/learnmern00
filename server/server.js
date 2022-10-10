@@ -10,6 +10,10 @@ mongoose
 // Model
 const Composer = require('./models/composer.model')
 
+//CORS !SHOULDN'T BE DONE THIS WAY
+const cors = require('cors')
+app.use(cors())
+
 //Routing
 app.get ('/api/composers', (req, res) => { //all the composers/list of composers
   Composer
