@@ -1,8 +1,19 @@
 import './App.css';
+import ComposersDetails from './pages/ComposerDetails/ComposerDetails';
+import ComposersPage from './pages/ComposersPage/ComposersPage';
+import IndexPage from './pages/IndexPage/IndexPage';
 
-function App() {
+import {Routes, Route} from 'react-router-dom'
+
+function App() { //returns jsx
   return (
-    <h1>Hola Jacob ^___^</h1>
+    <div className="container">
+      <Routes>
+        <Route path="/" element={<IndexPage />}/>
+        <Route path='/composers' element={<ComposersPage />}/>
+        <Route path='/composerdetails' element={<ComposersDetails />}/>
+      </Routes>
+    </div>
   );
 }
 
