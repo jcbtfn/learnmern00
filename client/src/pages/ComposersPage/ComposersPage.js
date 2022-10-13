@@ -21,7 +21,7 @@ const ComposersPage = () => {
       <hr />
       {composers.map(eachComposer => {
         return (
-          <Link to ={`/details/${eachComposer._id}`}>
+          <Link to ={`/composers/${eachComposer._id}`}>
             <article className='composer-card'>
               <h3>{eachComposer.name}</h3>
             </article>

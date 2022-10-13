@@ -11,7 +11,7 @@ function App() { //returns jsx
       <Routes>
         <Route path="/" element={<IndexPage />}/>
         <Route path='/composers' element={<ComposersPage />}/>
-        <Route path='/details/:composer_id' element={<ComposersDetails />}/>
+        <Route path='/composers/:composer_id' element={<ComposersDetails />}/>
       </Routes>
     </div>
   );
